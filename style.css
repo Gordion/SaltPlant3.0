@@ -396,7 +396,8 @@ a:link, a:visited {
   display: flex;
   max-width: 100%;
   justify-content: space-between;
-  height: 75px; }
+  height: 75px;
+  background-color: #F6F6F6; }
 
 .logo-wrapper {
   display: flex;
@@ -445,7 +446,7 @@ a:link, a:visited {
   left: 0;
   width: 400px;
   padding-top: 75px;
-  background-color: white;
+  background-color: #F6F6F6;
   z-index: 100; }
 
 .menu-opened .menu-main {
@@ -709,10 +710,17 @@ a:link, a:visited {
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
   margin: 0 -1px;
-  height: 36px;
-  width: 440px;
+  width: 100%;
   margin-top: 10px; }
+  @media (max-width: 768px) {
+    .buttons-theater {
+      height: 72px;
+      flex-direction: column;
+      align-self: initial;
+      flex-wrap: nowrap;
+      margin-top: 60%; } }
 
 .buttons {
   display: flex;
@@ -817,6 +825,12 @@ a:link, a:visited {
   justify-content: center;
   flex: 1;
   cursor: pointer; }
+
+.buttons-theater .buy {
+  height: 36px; }
+  @media (max-width: 768px) {
+    .buttons-theater .buy {
+      width: 80%; } }
 
 .buy-text {
   padding: 5px;
@@ -1167,7 +1181,8 @@ a:link, a:visited {
 
 .desc-options {
   width: 200px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  margin-top: 50px; }
 
 .square-hex {
   color: orange;
@@ -1263,15 +1278,13 @@ a:link, a:visited {
 
 .buy-holder {
   display: flex;
-  width: 75%;
   margin: 0 auto;
   margin-top: 50px; }
 
 .buy-holder-textblock {
   display: block;
   /* border: 1px solid black; */
-  /* height: 300px; */
-  padding: 0 10px 0; }
+  /* height: 300px; */ }
 
 .buy-holder-counter-button {
   width: 200px;
@@ -1283,7 +1296,11 @@ a:link, a:visited {
 
 .buy-holder-counter-cost {
   display: flex;
-  justify-content: space-between; }
+  justify-content: space-between;
+  border-top: 2px solid #D6D6D6;
+  border-bottom: 2px solid #D6D6D6;
+  margin-top: 20px;
+  margin-bottom: 50px; }
 
 .buy-holder-counter-cost-left {
   display: flex;
@@ -1310,13 +1327,10 @@ a:link, a:visited {
 
 .buy-holder-counter {
   /* margin-top: 45px; */
-  position: relative;
-  top: 13%; }
+  position: relative; }
 
 .buy-holder-description {
-  /* width: 50%; */
-  border-bottom: solid 1px #dadada;
-  padding-bottom: 10px; }
+  /* width: 50%; */ }
 
 .buy-holder-titleCost {
   display: flex;
@@ -1440,6 +1454,18 @@ a:link, a:visited {
 .main-theater-subtext-mp {
   color: orange;
   font-size: 0.8rem; }
+
+@media (max-width: 425px) {
+  .main-theater-titles {
+    margin-left: 20px;
+    position: relative;
+    bottom: 5px; } }
+
+@media (max-width: 425px) {
+  .text-box-mp {
+    margin-left: 20px;
+    position: relative;
+    bottom: 30px; } }
 
 .main-slider-title {
   font-size: 42px;
@@ -1912,6 +1938,41 @@ a:link, a:visited {
 .form-opened .overlay {
   display: block; }
 
+/*Team*/
+.team-placeholder {
+  margin: 20px 10px 30px;
+  width: 370px;
+  display: flex;
+  flex-direction: column; }
+
+.team-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 114px;
+  width: 370px;
+  margin-left: 5px; }
+
+.team-photo-holder {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.team-position, .team-email {
+  margin-top: 10px; }
+
+.team-name-style {
+  font-size: 26px;
+  font-weight: 600; }
+
+.team-position-style {
+  opacity: 0.5; }
+
+.team-email-style {
+  font-weight: 600; }
+
 /**/
 /*-----------------Footer-------------*/
 .footer-menu-section {
@@ -1978,9 +2039,10 @@ a:link, a:visited {
 
 .footer-icons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   margin-top: 115px;
-  align-items: center; }
+  align-items: center;
+  width: 90%; }
   @media (max-width: 425px) {
     .footer-icons {
       display: block;
@@ -2280,9 +2342,9 @@ a:link, a:visited {
     width: 300px;
     height: 288px; }
   .slider .slider-arrow-prev {
-    left: -44px; }
+    left: -50px; }
   .slider .slider-arrow-next {
-    right: -44px; }
+    right: -50px; }
   .slider2 .slider-arrow-next {
     top: -75px;
     z-index: 50;
