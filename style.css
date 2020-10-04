@@ -1281,10 +1281,19 @@ a:link, a:visited {
   margin: 0 auto;
   margin-top: 50px; }
 
+@media (max-width: 600px) {
+  .buy-holder-image {
+    width: 238px !important;
+    margin-right: inherit !important;
+    margin: 0 auto; } }
+
 .buy-holder-textblock {
   display: block;
   /* border: 1px solid black; */
   /* height: 300px; */ }
+  @media (max-width: 600px) {
+    .buy-holder-textblock {
+      margin: 10px; } }
 
 .buy-holder-counter-button {
   width: 200px;
@@ -1305,6 +1314,10 @@ a:link, a:visited {
 .buy-holder-counter-cost-left {
   display: flex;
   align-items: center; }
+  @media (max-width: 600px) {
+    .buy-holder-counter-cost-left {
+      margin-top: 15px;
+      margin-bottom: 15px; } }
 
 .buy-holder-counter-cost-right {
   display: flex;
@@ -1313,11 +1326,12 @@ a:link, a:visited {
 .buy-holder-counter-cost-left-text {
   padding-left: 10px; }
 
-/* .buy-holder-image-photo {
-  min-width: 400px;
-  max-width: 100%;
-  height: auto;
-} */
+@media (max-width: 600px) {
+  .buy-holder-image-photo {
+    width: 238px !important;
+    height: 216px !important;
+    margin-right: inherit; } }
+
 .amount {
   text-align: center;
   width: 30px; }
